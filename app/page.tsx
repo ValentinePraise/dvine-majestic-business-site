@@ -112,8 +112,9 @@ export default function HomePage() {
                 onError={(e) => {
                   // Fallback to gradient if image doesn't load
                   e.currentTarget.style.display = "none";
-                  e.currentTarget.parentElement.style.background =
-                    "linear-gradient(135deg, #1e3a8a, #1e40af, #2563eb)";
+                  e.currentTarget.parentElement &&
+                    (e.currentTarget.parentElement.style.background =
+                      "linear-gradient(135deg, #1e3a8a, #1e40af, #2563eb)");
                 }}
               />
             </div>
